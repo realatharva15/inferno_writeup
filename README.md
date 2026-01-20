@@ -16,181 +16,181 @@ PORT      STATE SERVICE
 
 `22/tcp    open  ssh`
 
-23/tcp    open  telnet
+`23/tcp    open  telnet`
 
-25/tcp    open  smtp
+`25/tcp    open  smtp`
 
-80/tcp    open  http
+`80/tcp    open  http`
 
-88/tcp    open  kerberos-sec
+`88/tcp    open  kerberos-sec`
 
-106/tcp   open  pop3pw
+`106/tcp   open  pop3pw`
 
-110/tcp   open  pop3
+`110/tcp   open  pop3`
 
-194/tcp   open  irc
+`194/tcp   open  irc`
 
-389/tcp   open  ldap
+`389/tcp   open  ldap`
 
-443/tcp   open  https
+`443/tcp   open  https`
 
-464/tcp   open  kpasswd5
+`464/tcp   open  kpasswd5`
 
-636/tcp   open  ldapssl
+`636/tcp   open  ldapssl`
 
-750/tcp   open  kerberos
+`750/tcp   open  kerberos`
 
-775/tcp   open  entomb
+`775/tcp   open  entomb`
 
-777/tcp   open  multiling-http
+`777/tcp   open  multiling-http`
 
-779/tcp   open  unknown
+`779/tcp   open  unknown`
 
-783/tcp   open  spamassassin
+`783/tcp   open  spamassassin`
 
-808/tcp   open  ccproxy-http
+`808/tcp   open  ccproxy-http`
 
-873/tcp   open  rsync
+`873/tcp   open  rsync`
 
-1001/tcp  open  webpush
+`1001/tcp  open  webpush`
 
-1178/tcp  open  skkserv
+`1178/tcp  open  skkserv`
 
-1210/tcp  open  eoss
+`1210/tcp  open  eoss`
 
-1236/tcp  open  bvcontrol
+`1236/tcp  open  bvcontrol`
 
-1300/tcp  open  h323hostcallsc
+`1300/tcp  open  h323hostcallsc`
 
-1313/tcp  open  bmc_patroldb
+`1313/tcp  open  bmc_patroldb`
 
-1314/tcp  open  pdps
+`1314/tcp  open  pdps`
 
-1529/tcp  open  support
+`1529/tcp  open  support`
 
-2000/tcp  open  cisco-sccp
+`2000/tcp  open  cisco-sccp`
 
-2003/tcp  open  finger
+`2003/tcp  open  finger`
 
-2121/tcp  open  ccproxy-ftp
+`2121/tcp  open  ccproxy-ftp`
 
-2150/tcp  open  dynamic3d
+`2150/tcp  open  dynamic3d`
 
-2600/tcp  open  zebrasrv
+`2600/tcp  open  zebrasrv`
 
-2601/tcp  open  zebra
+`2601/tcp  open  zebra`
 
-2602/tcp  open  ripd
+`2602/tcp  open  ripd`
 
-2603/tcp  open  ripngd
+`2603/tcp  open  ripngd`
 
-2604/tcp  open  ospfd
+`2604/tcp  open  ospfd`
 
-2605/tcp  open  bgpd
+`2605/tcp  open  bgpd`
 
-2606/tcp  open  netmon
+`2606/tcp  open  netmon`
 
-2607/tcp  open  connection
+`2607/tcp  open  connection`
 
-2608/tcp  open  wag-service
+`2608/tcp  open  wag-service`
 
-2988/tcp  open  hippad
+`2988/tcp  open  hippad`
 
-2989/tcp  open  zarkov
+`2989/tcp  open  zarkov`
 
-4224/tcp  open  xtell
+`4224/tcp  open  xtell`
 
-4557/tcp  open  fax
+`4557/tcp  open  fax`
 
-4559/tcp  open  hylafax
+`4559/tcp  open  hylafax`
 
-4600/tcp  open  piranha1
+`4600/tcp  open  piranha1`
 
-4949/tcp  open  munin
+`4949/tcp  open  munin`
 
-5051/tcp  open  ida-agent
+`5051/tcp  open  ida-agent`
 
-5052/tcp  open  ita-manager
+`5052/tcp  open  ita-manager`
 
-5151/tcp  open  esri_sde
+`5151/tcp  open  esri_sde`
 
-5354/tcp  open  mdnsresponder
+`5354/tcp  open  mdnsresponder`
 
-5355/tcp  open  llmnr
+`5355/tcp  open  llmnr`
 
-5432/tcp  open  postgresql
+`5432/tcp  open  postgresql`
 
-5555/tcp  open  freeciv
+`5555/tcp  open  freeciv`
 
-5666/tcp  open  nrpe
+`5666/tcp  open  nrpe`
 
-5667/tcp  open  unknown
+`5667/tcp  open  unknown`
 
-5674/tcp  open  hyperscsi-port
+`5674/tcp  open  hyperscsi-port`
 
-5675/tcp  open  v5ua
+`5675/tcp  open  v5ua`
 
-5680/tcp  open  canna
+`5680/tcp  open  canna`
 
-6346/tcp  open  gnutella
+`6346/tcp  open  gnutella`
 
-6514/tcp  open  syslog-tls
+`6514/tcp  open  syslog-tls`
 
-6566/tcp  open  sane-port
+`6566/tcp  open  sane-port`
 
-6667/tcp  open  irc
+`6667/tcp  open  irc`
 
-8021/tcp  open  ftp-proxy
+`8021/tcp  open  ftp-proxy`
 
-8081/tcp  open  blackice-icecap
+`8081/tcp  open  blackice-icecap`
 
-8088/tcp  open  radan-http
+`8088/tcp  open  radan-http`
 
-8990/tcp  open  http-wmap
+`8990/tcp  open  http-wmap`
 
-9098/tcp  open  unknown
+`9098/tcp  open  unknown`
 
-9359/tcp  open  unknown
+`9359/tcp  open  unknown`
 
-9418/tcp  open  git
+`9418/tcp  open  git`
 
-9673/tcp  open  unknown
+`9673/tcp  open  unknown`
 
-10000/tcp open  snet-sensor-mgmt
+`10000/tcp open  snet-sensor-mgmt`
 
-10081/tcp open  famdc
+`10081/tcp open  famdc`
 
-10082/tcp open  amandaidx
+`10082/tcp open  amandaidx`
 
-10083/tcp open  amidxtape
+`10083/tcp open  amidxtape`
 
-11201/tcp open  smsqp
+`11201/tcp open  smsqp`
 
-15345/tcp open  xpilot
+`15345/tcp open  xpilot`
 
-17001/tcp open  unknown
+`17001/tcp open  unknown`
 
-17002/tcp open  unknown
+`17002/tcp open  unknown`
 
-17003/tcp open  unknown
+`17003/tcp open  unknown`
 
-17004/tcp open  unknown
+`17004/tcp open  unknown`
 
-20011/tcp open  unknown
+`20011/tcp open  unknown`
 
-20012/tcp open  ss-idi-disc
+`20012/tcp open  ss-idi-disc`
 
-24554/tcp open  binkp
+`24554/tcp open  binkp`
 
-27374/tcp open  subseven
+`27374/tcp open  subseven`
 
-30865/tcp open  unknown
+`30865/tcp open  unknown`
 
-57000/tcp open  unknown
+`57000/tcp open  unknown`
 
-60177/tcp open  unknown
+`60177/tcp open  unknown`
 
-60179/tcp open  unknown
+`60179/tcp open  unknown`
 
 this reminds me of a honeypot CTF which i solved earlier. there is a lot of unnecessary noise which may cause confusion but lets stick to the plan and try to enumerate the webpage at the port 80 first to get some basic knowledge about the webserver.
 
