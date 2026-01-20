@@ -1,8 +1,8 @@
 # Try Hack Me - Inferno
 # Author: Atharva Bordavekar
 # Difficulty: Medium
-# Points:
-# Vulnerabilities:
+# Points: 60
+# Vulnerabilities: Codiad 2.8.4 RCE via file upload, PrivEsc via GTFObins
 
 # Phase 1 - Reconnaissance: 
 
