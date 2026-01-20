@@ -212,13 +212,16 @@ after some time we get the results:
 
 [80][http-get] host: 10.80.175.179   login: admin   password: < REDACTED >
 
-now we login using these credentials. after logging in, we find another login page. we will use the same credentials for this login page aswell. now we finally have an interface
+now we login using these credentials. after logging in, we find another login page. we will use the same credentials for this login page aswell. 
 
-we find a codiad interface which is an IDE. i personally had exploited a codiad machine in the CTF named IDE. so we will try to find some exploits of the codiad ide.
+![image1](https://github.com/realatharva15/inferno_writeup/blob/main/images/Screenshot%202026-01-20%20at%2023-32-01%20Codiad.png)
+
+now we finally have an interface. we find a codiad interface which is an IDE. i personally had exploited a codiad machine in the CTF named IDE. so we will try to find some exploits of the codiad ide.
 
 ```bash
 searchsploit codiad
 ```
+we find a couple of exploits.
 ```bash
 ------------------------------------- ---------------------------------
  Exploit Title                       |  Path
@@ -230,8 +233,9 @@ Codiad 2.8.4 - Remote Code Execution | multiple/webapps/49902.py
 Codiad 2.8.4 - Remote Code Execution | multiple/webapps/49907.py
 Codiad 2.8.4 - Remote Code Execution | multiple/webapps/50474.txt
 ------------------------------------- ---------------------------------
-```
+
 Shellcodes: No Results
+```
 
 i tried the python scripts but none of them worked since the website had two login panels. even after editing the scripts, we could not manage to get a shell. so i will be carrying out the exploit manually. lets get the 50474.txt and read the contents
 
@@ -275,13 +279,19 @@ inshort we have to navigate to the themes/default/filemanager/images/codiad/mani
 
 first navigate to the themes/default/filemanager/images/codiad/manifest/files/codiad/example/INF/ directory.
 
+![image2](https://github.com/realatharva15/inferno_writeup/blob/main/images/Screenshot%202026-01-20%20at%2023-32-41%20Codiad.png)
+
 now upload the reverseshell (NOTE: make sure your ip and port info is correct)
+
+![image3](https://github.com/realatharva15/inferno_writeup/blob/main/images/shellupload.png)
 
 ```bash
 #setup a netcat listner:
 nc -lnvp 4444
 ```
 now lets visit the path where this shell was uploaded to.
+
+![image4](https://github.com/realatharva15/inferno_writeup/blob/main/images/revshell.png)
 
 we have a shell as www-data! now lets enumerate the machine further. after doing some manual enumeration, we found 3 .txt files at /home/dante/Desktop. we immediately transfer them to our attacker machine. after analysing the 3 files which were inferno.txt, paradiso.txt and purgatory.txt we find no leads. seems like they were just some distractions by the creator of this room. 
 
@@ -309,6 +319,8 @@ User dante may run the following commands on ip-10-80-175-179:
     (root) NOPASSWD: /usr/bin/tee
 
 this is a classic GTFObins styled privilege escalation scenario. we can add user dante into the sudoers file and then execute sudo bash in order to get a root shell. but wait, there is a security feature which will kick us out of the shell after every minute. so we have to be quick.
+
+![image5](https://github.com/realatharva15/inferno_writeup/blob/main/images/Screenshot_2026-01-20_23-51-11.png)
 
 ```bash
 #add dante to the sudoers file using tee command:
