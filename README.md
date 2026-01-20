@@ -106,8 +106,8 @@ nmap -p- --min-rate=1000 <target_ip>
 57000/tcp open  unknown
 60177/tcp open  unknown
 60179/tcp open  unknown
-</details>
 ```
+</details>
 
 this reminds me of a honeypot CTF which i solved earlier. there is a lot of unnecessary noise which may cause confusion but lets stick to the plan and try to enumerate the webpage at the port 80 first to get some basic knowledge about the webserver.
 
