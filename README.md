@@ -11,9 +11,10 @@ nmap scan:
 nmap -p- --min-rate=1000 <target_ip>
 ```
 PORT      STATE SERVICE
-21/tcp    open  ftp
 
-22/tcp    open  ssh
+`21/tcp    open  ftp`
+
+`22/tcp    open  ssh`
 
 23/tcp    open  telnet
 
