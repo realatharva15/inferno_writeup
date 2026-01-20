@@ -13,6 +13,7 @@ nmap -p- --min-rate=1000 <target_ip>
 PORT      STATE SERVICE
 
 `21/tcp    open  ftp`
+
 `22/tcp    open  ssh`
 
 `23/tcp    open  telnet`
@@ -200,7 +201,7 @@ gobuster dir -u http://<target_ip> -w /usr/share/wordlists/dirbuster/medium.txt
 ```
 i found only one interesting directory from the scan:
 
-/inferno              (Status: 401) [Size: 460]
+`/inferno              (Status: 401) [Size: 460]`
 
 after accessing the /inferno directory, we get a browser interrupt which will ask for username and password. since i did not have any idea on the usernames, i tried various things like performing steghide on the image present at the website, tried bruteforcing usernames like satan, lucifer considering the verses on the main page were talking about satan. but all of these methods failed. i enumerated with the Usernames.txt wordlists from seclists but it took too much time. after all the futile enumeration, i decided to use the username "admin"
 
@@ -235,6 +236,7 @@ Codiad 2.8.4 - Remote Code Execution | multiple/webapps/50474.txt
 
 Shellcodes: No Results
 ```
+# Phase 2 - Initial Foothold:
 
 i tried the python scripts but none of them worked since the website had two login panels. even after editing the scripts, we could not manage to get a shell. so i will be carrying out the exploit manually. lets get the 50474.txt and read the contents
 
@@ -280,6 +282,8 @@ first navigate to the themes/default/filemanager/images/codiad/manifest/files/co
 
 ![image2](https://github.com/realatharva15/inferno_writeup/blob/main/images/Screenshot%202026-01-20%20at%2023-32-41%20Codiad.png)
 
+# Shell as www-data:
+
 now upload the reverseshell (NOTE: make sure your ip and port info is correct)
 
 ![image3](https://github.com/realatharva15/inferno_writeup/blob/main/images/shellupload.png)
@@ -293,6 +297,8 @@ now lets visit the path where this shell was uploaded to.
 ![image4](https://github.com/realatharva15/inferno_writeup/blob/main/images/revshell.png)
 
 we have a shell as www-data! now lets enumerate the machine further. after doing some manual enumeration, we found 3 .txt files at /home/dante/Desktop. we immediately transfer them to our attacker machine. after analysing the 3 files which were inferno.txt, paradiso.txt and purgatory.txt we find no leads. seems like they were just some distractions by the creator of this room. 
+
+# Shell as dante:
 
 in the /home/dante/Downloads directory we find a hidden file named .download.dat. it contains some hex strings. 
 
@@ -309,6 +315,8 @@ ssh dante@<target_ip>
 ```
 we read and submit the local.txt flag present at /home/dante/local.txt
 now immediately we will find out the privileges of the user dante using sudo -l
+
+# Phase 3 - ROOT access: 
 
 ```bash
 sudo -l
