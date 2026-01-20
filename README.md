@@ -11,10 +11,11 @@ nmap scan:
 nmap -p- --min-rate=1000 <target_ip>
 ```
 
-```markdown
+
 <details>
 <summary>Click to expand full Nmap scan results</summary>
-
+ 
+```bash
 21/tcp    open  ftp
 22/tcp    open  ssh
 23/tcp    open  telnet
